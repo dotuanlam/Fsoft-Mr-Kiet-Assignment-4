@@ -1,8 +1,9 @@
 const arrInputA = [1, 2, 3, 1, 2, 1, 1];
-const arrOutput = [];
+
 
 
 function findElementIsFamous(arr) {
+    const arrOutput = [];
     let countElenmentAppear = arr.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), {})
     let arrKeys = (Object.keys(countElenmentAppear));
     let arrVal = (Object.values(countElenmentAppear));
@@ -12,7 +13,7 @@ function findElementIsFamous(arr) {
             arrOutput.push(parseInt(arrKeys[i]))
         }
     }
-    console.log(arrOutput);
+    return arrOutput;
 }
 
 findElementIsFamous(arrInputA)

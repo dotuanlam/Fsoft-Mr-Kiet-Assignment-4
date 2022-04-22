@@ -1,7 +1,7 @@
 const arrInput = [1, 2, 3, 1, 2, 1, 1];
-arrOutput = [];
 
 function findElementIsLessFamous(arr) {
+    arrOutput = [];
     let countElenmentAppear = arr.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), {});
     let arrKeys = Object.keys(countElenmentAppear)
     let arrVal = Object.values(countElenmentAppear)
@@ -12,7 +12,7 @@ function findElementIsLessFamous(arr) {
             arrOutput.push(parseInt(arrKeys[i]))
         }
     }
-    console.log(arrOutput);
+    return arrOutput;
 }
 
 findElementIsLessFamous(arrInput)
